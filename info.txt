@@ -27,3 +27,8 @@
 Запустить команду npm install
 Запустить команду npm run dev, запустится webserver c каким-то ip и портом
 Перейти в браузере на этот адрес
+
+
+
+docker-compose build --no-cache
+docker-compose up --force-recreate

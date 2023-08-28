@@ -221,7 +221,7 @@ export default {
   align-items: center;
   justify-content: center;
   width: 90%;
-  height: 69vh;
+  height: 65vh;
 }
 
 .cam_content {

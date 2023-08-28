@@ -1,5 +1,5 @@
 from typing import Union
-import cv2
+import cv2.cv2 as cv2
 from av import VideoFrame
 from aiortc import VideoStreamTrack
 from config import PATH_MODEL

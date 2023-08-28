@@ -1,7 +1,7 @@
 from .models import Parking
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select, update, delete
-from .schemas import ParkingCreate, ParkingReady
+# from .schemas import ParkingCreate, ParkingReady
 
 
 
