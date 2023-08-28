@@ -1,0 +1,10 @@
+ultralytics
+fastapi
+SQLAlchemy
+aiosqlite
+aiortc
+aiosqlite
+alembic
+a2wsgi 
+python-dotenv
+websockets
