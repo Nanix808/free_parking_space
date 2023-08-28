@@ -88,16 +88,11 @@ export default {
 
 
     }
-
-
-
     const star_show_cam = () => {
 
       var config = {
         sdpSemantics: 'unified-plan'
       };
-
-
       pc = new RTCPeerConnection(config);
 
       // connect audio / video
@@ -110,14 +105,10 @@ export default {
         }
       });
       negotiate();
-
-
     };
-
 
     const stop = () => {
       // close peer connection
-
       if (pc) {
         pc.close();
         pc = null;
@@ -132,16 +123,11 @@ export default {
       }
     })
 
-
     watchEffect(() => start_video.value ? star_show_cam() : stop());
-
     return {
       start_video,
       rtsp_show,
       star_show_cam,
-
-
-
     };
   }
 

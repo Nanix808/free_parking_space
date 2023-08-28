@@ -37,42 +37,12 @@ export default {
   </div>
 </template>
 
-
-
-
-
-
-
-
 <style lang="scss">
 .slider {
   width: 100%;
-  // display: flex;
-  // align-items: center;
-  // justify-content: center;
 }
 
 
-
-
-/* component style */
-// .vue-slider-disabled {
-//   .vue-slider-rail {
-//     background-color: $railColorDisabled;
-//   }
-//   .vue-slider-dot-handle {
-//     background-color: $disabledColor;
-//   }
-//   .vue-slider-process {
-//     background-color: $disabledColor;
-//   }
-//   .vue-slider-mark-step {
-//     background-color: $disabledColor;
-//     &-active {
-//       background-color: $railColorDisabled;
-//     }
-//   }
-// }
 
 /* rail style */
 .vue-slider-rail {
@@ -119,11 +89,6 @@ export default {
     border-radius: 50%;
     box-shadow: inset 0.2rem 0.2rem 0.5rem var(--greyLight-2), inset -0.2rem -0.2rem 0.5rem var(--white);
 
-
-
-
-
-
     &::after {
       content: '';
       position: absolute;
@@ -138,13 +103,7 @@ export default {
       border-radius: 50%;
       background: var(--white);
       box-shadow: 0px 0.1rem 0.3rem 0px var(--greyLight-3);
-
-
-
-
     }
-
-
   }
 
   @at-root &-tooltip {
@@ -157,15 +116,12 @@ export default {
         opacity: 1;
         border-radius: 0.6rem;
         background: var(--greyLight-1);
-
-
       }
     }
 
     @at-root &-inner {
 
       opacity: 0;
-
       border-radius: 0.6rem;
       display: flex;
       align-items: center;
@@ -174,10 +130,6 @@ export default {
       height: 2.5rem;
       width: 3rem;
       box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
-
-
-
-
 
       @at-root .vue-slider-dot-tooltip-text {
 
@@ -191,8 +143,6 @@ export default {
         justify-content: center;
         box-sizing: content-box;
       }
-
-
     }
   }
 }

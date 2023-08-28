@@ -91,8 +91,6 @@ export default {
     canvasWidth: Number,
     canvasHeight: Number,
     backgroundImage: String,
-
-
   },
 
   emits: {
@@ -107,7 +105,6 @@ export default {
     const Open = toRef(() => props.isOpen)
     const Width = toRef(() => props.canvasWidth)
     const Height = toRef(() => props.canvasHeight)
-    // const bgImage = toRef(() => props.backgroundImage)
     const ctx = ref(null)
     const ctxBackround = ref(null)
     const VueCanvasDrawing = ref()
@@ -122,7 +119,6 @@ export default {
     let startX = 0, startY = 0;
     let radius = 0;
     let isMouseDown = false;
-
 
     const change_conf = (value) => {
       emit("conf", value)
@@ -147,7 +143,6 @@ export default {
 
     }
 
-
     const drawCircle = (circle) => {
       let { x1, y1, rad } = circle
       ctx.value.beginPath();
@@ -156,12 +151,10 @@ export default {
       ctx.value.stroke();
     }
 
-
     const canvasMouseDown = (event) => {
       startX = event.offsetX;
       startY = event.offsetY;
       isMouseDown = true;
-
     }
 
     const canvasMouseUp = () => {
@@ -283,8 +276,6 @@ video1 {
     height: 40px;
     margin: 0 20px;
   }
-
-
 }
 
 .popup_container {
@@ -293,7 +284,6 @@ video1 {
   flex-direction: column;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
-
   background: var(--greyLight-1);
 }
 
@@ -340,8 +330,6 @@ video1 {
   background-size: cover;
   background: url(../assets/images/close-hover.svg);
 }
-
-
 
 .coef_container {
   width: 100%;

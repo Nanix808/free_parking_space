@@ -15,10 +15,6 @@ stream_to_web = APIRouter()
 pcs = set()
 
 
-
-
-
-
 @stream_to_web.websocket("/ws/{client_id}")
 async def websocket_endpoint(websocket: WebSocket, client_id: int):
     await manager.connect(websocket, client_id)
@@ -26,11 +22,9 @@ async def websocket_endpoint(websocket: WebSocket, client_id: int):
         while True:
             data = await websocket.receive_json()
             websocket.data = data
-            await manager.send_personal_message(f"You wrote: {data}", websocket)  
+            await manager.send_personal_message(f"You wrote: {data}", websocket)
     except WebSocketDisconnect:
         manager.disconnect(websocket,  client_id)
- 
-
 
 
 @stream_to_web.post("/offer")
@@ -43,6 +37,7 @@ async def offer(params: Offer, db: AsyncSession = Depends(get_db)):
             pc = RTCPeerConnection()
             pcs.add(pc)
             WebSocket_id = await manager.get_by_id(client_id=client_id)
+
             @pc.on("connectionstatechange")
             async def on_connectionstatechange():
                 print("Connection state is %s" % pc.connectionState)
@@ -54,15 +49,17 @@ async def offer(params: Offer, db: AsyncSession = Depends(get_db)):
                 parking_dal = ParkingDAL(session)
 
                 answer = await parking_dal.get_parking_by_rtsp(
-                    rtsp= params.rtsp
+                    rtsp=params.rtsp
                 )
                 circles = answer.circle
                 conf = answer.conf
                 iou = answer.iou
-                video = Stream(params.rtsp, circles=circles, preprocesing=True, conf=conf, iou=iou, websoket=WebSocket_id)
+                video = Stream(params.rtsp, circles=circles, preprocesing=True,
+                               conf=conf, iou=iou, websoket=WebSocket_id)
             else:
                 client_id = params.client_id
-                video = Stream(params.rtsp, preprocesing=True, websoket=WebSocket_id)
+                video = Stream(params.rtsp, preprocesing=True,
+                               websoket=WebSocket_id)
             if video:
                 pc.addTrack(video)
             await pc.setRemoteDescription(offer)
