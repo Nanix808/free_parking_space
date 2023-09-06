@@ -6,7 +6,6 @@
 
 </p>
 
-<p align="center"><img  src="./readme_asserts/logo.png" width="40%"></p>
 
 ## ***Навигация***
 - [Описание](#описание)
