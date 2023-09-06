@@ -13,7 +13,7 @@
 - [Возможные неполадки](#возможные_неполадки)
 - [Как пользоваться сервисом](#как_пользоваться)
   - [Архитектура](#архитектура)
-  - [Computer Vision & Machine Learning](#computer_vision_and_machine_learning)
+  - [Технологии](#Технологии)
 - [How to install](#how_to_install)
 
 <a name="описание"></a> 
@@ -53,12 +53,12 @@
 <img src="./readme_asserts/parking.vt.svg" width="70%"></p> 
 
 <a name="computer_vision_and_machine_learning"></a> 
-### Computer Vision & Machine Learning
+### Технологии
 
-**Технонологии**:
 - [OpenCV](https://opencv.org/)
 - [AioRtc](https://github.com/aiortc/aiortc)
 - [VUE](https://vuejs.org/)
+- [YOLO](https://docs.ultralytics.com/)
 
 <a name="how_to_install"></a> 
 ## ***How to install***
