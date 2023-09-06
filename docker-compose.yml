@@ -1,29 +1,18 @@
-version: '3.5'
+version: '3.8'
 
 services:
 
   parking_backend:
     build: backend/.
     container_name: parking_backend
-    ports:
-      - '8000:8000'
+    network_mode: "host"
     restart: unless-stopped
-    networks:
-      - mycustomnetwork
-        
-
+    
 
   parking_frontend:
     build: frontend/.
     container_name: parking_frontend
     ports:
       - '8080:80'
-    restart: unless-stopped
-    networks:
-      - mycustomnetwork
-       
-
-networks:
-  mycustomnetwork:
-    driver: bridge
+    restart: unless-stopped  
     

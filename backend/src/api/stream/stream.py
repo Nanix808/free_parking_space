@@ -1,5 +1,5 @@
 from typing import Union
-import cv2.cv2 as cv2
+import cv2
 from av import VideoFrame
 from aiortc import VideoStreamTrack
 from config import PATH_MODEL
@@ -37,6 +37,7 @@ class Stream(VideoStreamTrack):
         frame = VideoFrame.from_ndarray(img, format='rgb24')
         frame.pts = pts
         frame.time_base = time_base
+
 
         if self.websoket:
             if self.websoket.data:

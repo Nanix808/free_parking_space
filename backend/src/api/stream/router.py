@@ -36,6 +36,7 @@ async def offer(params: Offer, db: AsyncSession = Depends(get_db)):
             setting = params.setting
             pc = RTCPeerConnection()
             pcs.add(pc)
+           
             WebSocket_id = await manager.get_by_id(client_id=client_id)
 
             @pc.on("connectionstatechange")

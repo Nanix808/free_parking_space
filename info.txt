@@ -32,3 +32,7 @@
 
 docker-compose build --no-cache
 docker-compose up --force-recreate
+
+
+rtsp://admin:Password01@172.16.10.18:554/cam/realmonitor?channel=1&subtype=0&unicast=true&proto=Onvif
+rtsp://viewer:SBlive4321@86.57.177.172:554/live.sdp
